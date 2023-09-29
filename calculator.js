@@ -14,6 +14,6 @@ function multiply(x, y) {
     return x * y;
 }
 
-function divide() {
-
+function divide(x, y) {
+    return x / y;
 }
