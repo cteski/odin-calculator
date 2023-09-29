@@ -6,8 +6,8 @@ function add(x, y) {
     return x + y;
 }
 
-function subtract() {
-
+function subtract(x, y) {
+    return x - y;
 }
 
 function multiply() {
