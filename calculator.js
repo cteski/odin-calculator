@@ -44,7 +44,7 @@ function operate(x, y, operator) {
     let result = 0;
     switch(operator) {
         case '+':
-            result = add(x, y);
+            result = add(parseFloat(x), parseFloat(y));
             break;
         case '-':
             result = subtract(x, y);
