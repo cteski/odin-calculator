@@ -1,6 +1,6 @@
-let numA = 0;
-let numB = 0;
-let operator = '';
+let numA = null;
+let numB = null;
+let operator = null;
 
 const calculatorDiv = document.querySelector('#calculator');
 const displayDiv = calculatorDiv.querySelector('#display');
