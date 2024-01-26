@@ -63,5 +63,5 @@ function clear() {
 }
 
 function display (input) {
-    display.textContent = input;
+    displayDiv.textContent = input;
 }
