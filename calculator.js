@@ -13,8 +13,9 @@ buttons.forEach((button) => {
         if (button.classList.contains('clear')) {
             clear();
         }
-        else {
-            displayDiv.textContent += button.textContent;
+        
+        if (button.classList.contains('number')) {
+            inputNumber(button.textContent);
         }
     });
 })
@@ -53,6 +54,25 @@ function operate(x, y, operator) {
     }
 
     return result;
+}
+
+function inputNumber (input) {
+    if (numA == null) {
+        numA = input;
+        display(numA);
+    }
+    else if (operator == null) {
+        numA += input;
+        display(numA);
+    }
+    else if (numB == null) {
+        numB = input;
+        display(numA + operator + numB);
+    }
+    else {
+        numB += input;
+        display(numA + operator + numb);
+    }
 }
 
 function clear() {
