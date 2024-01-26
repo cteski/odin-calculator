@@ -61,3 +61,7 @@ function clear() {
     operator = null;
     displayDiv.textContent = 0;
 }
+
+function display (input) {
+    display.textContent = input;
+}
