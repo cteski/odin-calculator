@@ -48,3 +48,10 @@ function operate(x, y, operator) {
 
     return result;
 }
+
+function clear() {
+    numA = null;
+    numB = null;
+    operator = null;
+    displayDiv.textContent = 0;
+}
