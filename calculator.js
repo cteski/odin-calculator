@@ -21,6 +21,21 @@ buttons.forEach((button) => {
         if (button.classList.contains('operator')) {
             inputOperator(button.textContent);
         }
+
+        if (button.classList.contains('operate')) {
+            if (numA != null && operator != null && numB != null) {
+                display(operate(numA, numB, operator));
+            }
+            else if (numA != null && operator != null && numB == null) {
+                display(operate(numA, numA, operator));
+            }
+            else if (numA != null && operator == null && numB == null) {
+                return;
+            }
+            else {
+                display('ERROR');
+            }
+        }
     });
 })
 
