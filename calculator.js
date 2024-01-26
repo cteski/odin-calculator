@@ -9,7 +9,13 @@ const buttons = calculatorDiv.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        displayDiv.textContent += button.textContent;
+
+        if (button.classList.contains('clear')) {
+            clear();
+        }
+        else {
+            displayDiv.textContent += button.textContent;
+        }
     });
 })
 
