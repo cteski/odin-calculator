@@ -17,6 +17,10 @@ buttons.forEach((button) => {
         if (button.classList.contains('number')) {
             inputNumber(button.textContent);
         }
+
+        if (button.classList.contains('operator')) {
+            inputOperator(button.textContent);
+        }
     });
 })
 
@@ -71,7 +75,27 @@ function inputNumber (input) {
     }
     else {
         numB += input;
-        display(numA + operator + numb);
+        display(numA + operator + numB);
+    }
+}
+
+function inputOperator (input) {
+    if (numA == null) {
+        numA = 0;
+        operator = input;
+        display(numA + operator);
+    }
+    else if (numA != null && operator == null && numB == null) {
+        operator = input;
+        display(numA + operator);
+    }
+    else if (numA != null && operator != null && numB == null) {
+        operator = input;
+        display(numA + operator);
+    }
+    else {
+        numA = operate(numA, numB, operator);
+        display(numA);
     }
 }
 
