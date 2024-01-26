@@ -79,7 +79,7 @@ function clear() {
     numA = null;
     numB = null;
     operator = null;
-    displayDiv.textContent = 0;
+    display(0);
 }
 
 function display (input) {
