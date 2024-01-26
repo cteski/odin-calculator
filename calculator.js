@@ -95,7 +95,9 @@ function inputOperator (input) {
     }
     else {
         numA = operate(numA, numB, operator);
-        display(numA);
+        operator = input;
+        numB = null;
+        display(numA + operator);
     }
 }
 
