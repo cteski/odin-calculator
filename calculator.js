@@ -14,6 +14,10 @@ buttons.forEach((button) => {
             clear();
         }
         
+        if (numA == 'ERROR') {
+            clear();
+        }
+
         if (button.classList.contains('number')) {
             inputNumber(button.textContent);
         }
