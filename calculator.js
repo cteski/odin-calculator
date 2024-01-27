@@ -24,10 +24,11 @@ buttons.forEach((button) => {
 
         if (button.classList.contains('operate')) {
             if (numA != null && operator != null && numB != null) {
-                display(operate(numA, numB, operator));
+                display(operate());
             }
             else if (numA != null && operator != null && numB == null) {
-                display(operate(numA, numA, operator));
+                numB = numA;
+                display(operate());
             }
             else if (numA != null && operator == null && numB == null) {
                 return;
@@ -59,22 +60,26 @@ function divide(x, y) {
     return x / y;
 }
 
-function operate(x, y, operator) {
+function operate() {
     let result = 0;
     switch(operator) {
         case '+':
-            result = add(parseFloat(x), parseFloat(y));
+            result = add(parseFloat(numA), parseFloat(numB));
             break;
         case '-':
-            result = subtract(x, y);
+            result = subtract(numA, numB);
             break;
         case '*':
-            result = multiply(x, y);
+            result = multiply(numA, numB);
             break;
         case '/':
-            result = divide(x, y);
+            result = divide(numA, numB);
             break;
     }
+
+    numA = result;
+    operator = null;
+    numB = null;
 
     return result;
 }
