@@ -22,6 +22,10 @@ buttons.forEach((button) => {
             inputNumber(button.textContent);
         }
 
+        if (button.classList.contains('decimal')) {
+            inputDecimal(button.textContent);
+        }
+
         if (button.classList.contains('operator')) {
             inputOperator(button.textContent);
         }
@@ -103,6 +107,25 @@ function inputNumber (input) {
     }
     else {
         numB += input;
+        display(numA + operator + numB);
+    }
+}
+
+function inputDecimal (input) {
+    if (numA == null) {
+        numA = '0.';
+        display(numA);
+    }
+    else if (numA != null && !numA.includes('.') && operator == null) {
+        numA += '.';
+        display(numA);
+    }
+    else if (operator != null && numB == null) {
+        numB = '0.';
+        display(numA + operator + numB);
+    }
+    else if (operator != null && numB != null && !numB.includes('.')) {
+        numB += '.';
         display(numA + operator + numB);
     }
 }
