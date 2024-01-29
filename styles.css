@@ -1,0 +1,40 @@
+body {
+    background-color:   #faf7f0;
+}
+
+.clear {
+    background-color: #bccef8;
+    color: #000000;
+}
+
+.number, .decimal {
+    background-color: #98a8f8;
+    color: #000;
+}
+
+.operator, .operate {
+    background-color: #cdfcf6;
+    color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #4b5d67;
+    }
+
+    .clear {
+        background-color: #322f3d;
+        color: #d9d9d9;
+    }
+
+    .number, .decimal {
+        background-color: #87556f;
+        color: #d9d9d9;;
+    }
+
+    .operator, .operate {
+        background-color: #59405c;
+        color: #d9d9d9;
+    }
+
+}
