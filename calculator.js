@@ -105,11 +105,11 @@ function inputNumber (input) {
     }
     else if (numB == null) {
         numB = input;
-        display(numA + operator + numB);
+        display(numB);
     }
     else if (numB.length < NUMBER_MAX_LENGTH) {
         numB += input;
-        display(numA + operator + numB);
+        display(numB);
     }
 }
 
@@ -124,11 +124,11 @@ function inputDecimal (input) {
     }
     else if (operator != null && numB == null) {
         numB = '0.';
-        display(numA + operator + numB);
+        display(numB);
     }
     else if (operator != null && numB != null && !numB.includes('.')) {
         numB += '.';
-        display(numA + operator + numB);
+        display(numB);
     }
 }
 
@@ -136,15 +136,12 @@ function inputOperator (input) {
     if (numA == null) {
         numA = 0;
         operator = input;
-        display(numA + operator);
     }
     else if (numA != null && operator == null && numB == null) {
         operator = input;
-        display(numA + operator);
     }
     else if (numA != null && operator != null && numB == null) {
         operator = input;
-        display(numA + operator);
     }
     else {
         numA = operate(numA, numB, operator);
