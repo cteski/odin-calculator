@@ -2,6 +2,16 @@ body {
     background-color:   #faf7f0;
 }
 
+#calculator {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 100px);
+}
+
+#display, .clear {
+    grid-column: span 4;
+}
+
 .clear {
     background-color: #bccef8;
     color: #000000;
