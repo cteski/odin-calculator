@@ -1,11 +1,17 @@
 body {
-    background-color:   #faf7f0;
+    align-items: center;
+    background-color: #faf7f0;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    min-height: 55vh;
 }
 
 #calculator {
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 60px);
 }
 
 #display, .clear {
