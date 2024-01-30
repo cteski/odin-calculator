@@ -14,6 +14,11 @@ body {
     grid-template-rows: minmax(80px, auto) repeat(5, 60px);
 }
 
+button, #display {
+    border: 3px solid #9a9a9a;
+    border-radius: 5px;
+}
+
 #display, .clear {
     grid-column: span 4;
 }
@@ -36,6 +41,10 @@ body {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #4b5d67;
+    }
+
+    button, #display {
+        border: 3px solid #aaaaaa;
     }
 
     .clear {
