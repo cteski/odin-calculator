@@ -2,10 +2,11 @@ let numA = null;
 let numB = null;
 let operator = null;
 
+const NUMBER_MAX_LENGTH = 8;
+
 const calculatorDiv = document.querySelector('#calculator');
 const displayDiv = calculatorDiv.querySelector('#display');
 const buttons = calculatorDiv.querySelectorAll('button');
-
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -98,6 +99,7 @@ function inputNumber (input) {
         display(numA);
     }
     else if (operator == null) {
+        if (numA.length < NUMBER_MAX_LENGTH)
         numA += input;
         display(numA);
     }
@@ -105,7 +107,7 @@ function inputNumber (input) {
         numB = input;
         display(numA + operator + numB);
     }
-    else {
+    else if (numB.length < NUMBER_MAX_LENGTH) {
         numB += input;
         display(numA + operator + numB);
     }
