@@ -98,8 +98,7 @@ function inputNumber (input) {
         numA = input;
         display(numA);
     }
-    else if (operator == null) {
-        if (numA.length < NUMBER_MAX_LENGTH)
+    else if (operator == null && numA.length < NUMBER_MAX_LENGTH) {
         numA += input;
         display(numA);
     }
